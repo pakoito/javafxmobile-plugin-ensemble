@@ -9,13 +9,10 @@ buildscript {
  
     dependencies {
         classpath 'org.javafxports:javafxmobile-plugin:1.0.0-SNAPSHOT'
-        classpath 'net.sf.proguard:proguard-gradle:5.1'
     }
 }
 
-
 apply plugin: 'javafxmobile'
-apply plugin: 'application'
 mainClassName='ensemble.EnsembleApp'
 repositories {
     jcenter()
@@ -25,10 +22,14 @@ repositories {
     }
 }
 
-
 dependencies {
-compile files('libs/lucene-core-3.2.0.jar')
-compile files('libs/lucene-grouping-3.2.0.jar')
-    // androidRuntime files('libs/Ensemble8.jar')
+    compile files('libs/lucene-core-3.2.0.jar')
+    compile files('libs/lucene-grouping-3.2.0.jar')
+//    androidRuntime files('libs/Ensemble8.jar')
 }
 
+jfxmobile {
+    android {
+        manifest = file('src/main/AndroidManifest.xml')
+    }
+}
