@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.javafxports.ensemble8" android:versionCode="1" android:versionName="8u40" android:installLocation="auto">
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17"/>
+	<supports-screens android:xlargeScreens="true"/>
+	<application android:label="JavaFX Ensemble8" android:name="android.support.multidex.MultiDexApplication" android:hardwareAccelerated="true" android:allowBackup="true">
+		<activity android:name="javafxports.android.FXActivity" android:label="JavaFX Ensemble8" android:configChanges="orientation">
+			<meta-data android:name="launcher.class" android:value="javafxports.android.DalvikLauncher"/>
+			<!-- Full name of the application class to run -->
+			<meta-data android:name="main.class" android:value="ensemble.EnsembleApp"/>
+			<!-- Jvm arguments (delimiter |) -->
+			<meta-data android:name="jvm.args" android:value="-Djavafx.verbose=true|-Djavafx.name=value"/>
+			<!-- Application arguments (delimiter |) -->
+			<meta-data android:name="app.args" android:value="arg1|arg2"/>
+			<!-- Jdwp debugging port. Don't forget to forward port (adb forward tcp:port1 tcp:port2) -->
+			<meta-data android:name="debug.port" android:value="0"/>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>
