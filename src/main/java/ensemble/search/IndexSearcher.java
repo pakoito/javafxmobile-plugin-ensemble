@@ -38,24 +38,25 @@ import java.io.InputStreamReader;
 import java.util.*;
 import javafx.application.ConditionalFeature;
 import javafx.application.Platform;
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.document.Document;
-import org.apache.lucene.queryParser.MultiFieldQueryParser;
-import org.apache.lucene.queryParser.ParseException;
-import org.apache.lucene.search.Query;
-import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.search.Sort;
-import org.apache.lucene.search.grouping.GroupDocs;
-import org.apache.lucene.search.grouping.SearchGroup;
-import org.apache.lucene.search.grouping.TermSecondPassGroupingCollector;
-import org.apache.lucene.search.grouping.TopGroups;
-import org.apache.lucene.util.Version;
+//import org.apache.lucene.analysis.Analyzer;
+//import org.apache.lucene.analysis.standard.StandardAnalyzer;
+//import org.apache.lucene.document.Document;
+//import org.apache.lucene.queryParser.MultiFieldQueryParser;
+//import org.apache.lucene.queryParser.ParseException;
+//import org.apache.lucene.search.Query;
+//import org.apache.lucene.search.ScoreDoc;
+//import org.apache.lucene.search.Sort;
+//import org.apache.lucene.search.grouping.GroupDocs;
+//import org.apache.lucene.search.grouping.SearchGroup;
+//import org.apache.lucene.search.grouping.TermSecondPassGroupingCollector;
+//import org.apache.lucene.search.grouping.TopGroups;
+//import org.apache.lucene.util.Version;
 
 /**
  * Class for searching the index
  */
 public class IndexSearcher {
+    /*
     private final static List<SearchGroup<String>> searchGroups = new ArrayList<>();
     static {
         for (DocumentType dt: DocumentType.values()){
@@ -109,7 +110,7 @@ public class IndexSearcher {
                         * the runtime platform does not support. We really want to show
                         * just 5 results, but we search for 10 and filter out unsupported
                         * samples and show just 5.
-                        */
+                        
                         if (docType == DocumentType.SAMPLE) {
                             if (Samples.ROOT.sampleForPath(result.getEnsemblePath().substring(9).trim()) == null) {
                                 
@@ -137,7 +138,7 @@ public class IndexSearcher {
      * Simple command line test application
      * @param args command line arguments
      * @throws Exception for maps errors
-     */
+     
     public static void main(String[] args) throws Exception {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in, "UTF-8"));
         IndexSearcher indexSearcher = new IndexSearcher();
@@ -156,4 +157,5 @@ public class IndexSearcher {
             }
         }
     }
+*/
 }

@@ -39,9 +39,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.apache.lucene.store.Directory;
-import org.apache.lucene.store.IndexInput;
-import org.apache.lucene.store.IndexOutput;
+//import org.apache.lucene.store.Directory;
+//import org.apache.lucene.store.IndexInput;
+//import org.apache.lucene.store.IndexOutput;
 
 /**
  * A very simple implementation of lucene Directory, it reads a index from the classpath in a directory called index
@@ -49,7 +49,7 @@ import org.apache.lucene.store.IndexOutput;
  * the names of all the other files and their sizes. In the format "name:length" one file per line. When a file needs
  * to be read the whole file is loaded into memory.
  */
-public class ClasspathDirectory extends Directory {
+public class ClasspathDirectory {//extends Directory {
     private String[] allFiles;
     private final Map<String,Long> fileLengthMap = new HashMap<>();
 
@@ -71,11 +71,13 @@ public class ClasspathDirectory extends Directory {
         }
     }
 
-    @Override public String[] listAll() throws IOException {
+    //@Override 
+    public String[] listAll() throws IOException {
         return allFiles;
     }
-
-    @Override public IndexInput openInput(String s) throws IOException {
+/*
+    //@Override
+    public IndexInput openInput(String s) throws IOException {
         return new ClassPathIndexInput(
             getClass().getResourceAsStream("index/"+s),
             fileLengthMap.get(s).intValue()
@@ -133,4 +135,5 @@ public class ClasspathDirectory extends Directory {
     @Override public void deleteFile(String s) throws IOException { throw new UnsupportedOperationException("Not implemented"); }
     @Override public long fileLength(String s) throws IOException { throw new UnsupportedOperationException("Not implemented"); }
     @Override public IndexOutput createOutput(String s) throws IOException { throw new UnsupportedOperationException("Not implemented"); }
-}
+*/
+    }

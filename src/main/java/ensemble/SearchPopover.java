@@ -51,7 +51,7 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.util.Duration;
-import org.apache.lucene.queryParser.ParseException;
+//import org.apache.lucene.queryParser.ParseException;
 
 
 /**
@@ -110,21 +110,21 @@ public class SearchPopover extends Popover {
         }
         boolean haveResults = false;
         Map<DocumentType, List<SearchResult>> results = null;
-        try {
-            if (indexSearcher == null) indexSearcher = new IndexSearcher();
-            results = indexSearcher.search(
-                    searchBox.getText() + (searchBox.getText().matches("\\w+") ? "*" : "")
-            );
-            // check if we have any results
-            for (List<SearchResult> categoryResults: results.values()) {
-                if (categoryResults.size() > 0) {
-                    haveResults = true;
-                    break;
-                }
-            }
-        } catch (ParseException e) {
-            showError(e.getMessage().substring("Cannot parse ".length()));
-        }
+//        try {
+//            if (indexSearcher == null) indexSearcher = new IndexSearcher();
+//            results = indexSearcher.search(
+//                    searchBox.getText() + (searchBox.getText().matches("\\w+") ? "*" : "")
+//            );
+//            // check if we have any results
+//            for (List<SearchResult> categoryResults: results.values()) {
+//                if (categoryResults.size() > 0) {
+//                    haveResults = true;
+//                    break;
+//                }
+//            }
+//        } catch (ParseException e) {
+//            showError(e.getMessage().substring("Cannot parse ".length()));
+//        }
         if (haveResults) {
             showError(null);
             populateMenu(results);

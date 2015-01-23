@@ -85,11 +85,11 @@ public class EnsembleCompiletimeMain {
             System.out.println("==================================================================");
             File indexDir = new File(ensembleDir,"src/generated/resources/ensemble/search/index");
             indexDir.mkdirs();
-            BuildEnsembleSearchIndex.buildSearchIndex(
-                allSamples, 
-                "http://download.java.net/jdk8/jfxdocs/",
-                "http://docs.oracle.com/javafx/index.html",
-                indexDir);
+//            BuildEnsembleSearchIndex.buildSearchIndex(
+//                allSamples, 
+//                "http://download.java.net/jdk8/jfxdocs/",
+//                "http://docs.oracle.com/javafx/index.html",
+//                indexDir);
         }
     }
 }

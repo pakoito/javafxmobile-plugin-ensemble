@@ -148,7 +148,7 @@ public class DocumentationIndexer {
     public static void main(String[] args) throws Exception {
 //        final String url = "http://docs.oracle.com/javafx/2/layout/builtin_layouts.htm#sthref15";
         final String url = "http://docs.oracle.com/javafx/2/overview/jfxpub-overview.htm";
-        parseDocsPage(url, BuildEnsembleSearchIndex.grabWebPage(url).toString());
+    //    parseDocsPage(url, BuildEnsembleSearchIndex.grabWebPage(url).toString());
     }
     
     private static class DocHandler extends DefaultHandler {
