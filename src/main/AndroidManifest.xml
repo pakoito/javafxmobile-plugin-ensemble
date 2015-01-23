@@ -3,7 +3,6 @@
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17"/>
 	<supports-screens android:xlargeScreens="true"/>
 	<application android:label="JavaFX Ensemble8" android:name="android.support.multidex.MultiDexApplication" android:hardwareAccelerated="true" android:allowBackup="true">
 		<activity android:name="javafxports.android.FXActivity" android:label="JavaFX Ensemble8" android:configChanges="orientation">

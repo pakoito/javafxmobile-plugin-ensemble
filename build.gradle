@@ -22,15 +22,6 @@ repositories {
     }
 }
 
-dependencies {
-//    compile 'org.apache.lucene:lucene-core:3.6.2'
-//    compile 'org.apache.lucene:lucene-grouping:3.6.2'
-    // compile 'org.apache.lucene:lucene-groups:4.10.3'
-    // compile files('libs/lucene-core-3.2.0.jar')
-    // compile files('libs/lucene-grouping-3.2.0.jar')
-//    androidRuntime files('libs/Ensemble8.jar')
-}
-
 jfxmobile {
     ios {
         forceLinkClasses = ['ensemble.**.*']
