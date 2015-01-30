@@ -1,10 +1,6 @@
 buildscript {
     repositories {
-        mavenLocal()
-        mavenCentral()
-        maven {
-            url "https://oss.sonatype.org/content/repositories/snapshots/"
-        }
+        jcenter()
     }
  
     dependencies {
@@ -13,13 +9,11 @@ buildscript {
 }
 
 apply plugin: 'javafxmobile'
+
 mainClassName='ensemble.EnsembleApp'
+
 repositories {
     jcenter()
-    mavenLocal()
-    maven {
-        url "https://oss.sonatype.org/content/repositories/snapshots/"
-    }
 }
 
 jfxmobile {
@@ -27,6 +21,7 @@ jfxmobile {
         forceLinkClasses = ['ensemble.**.*']
     }
     android {
-        manifest = file('src/main/AndroidManifest.xml')
+        applicationPackage = 'org.javafxports.ensemble'
+        // manifest = file('src/main/AndroidManifest.xml')
     }
 }
